@@ -1,7 +1,7 @@
 //*===== banner area start ====*//
 .banner-area{
     .swiper-item{
-        border-radius: 50px;
+        // border-radius: 50px;
         overflow: hidden;
         // height: auto;
             @include breakpoint (max-md) {
@@ -23,12 +23,11 @@
             position: relative;
             img{
                 position: absolute;
-                border-radius: 30px;
                 top: 0;
                 left: 0;
                 z-index: -1;
                 overflow: hidden;
-                padding: 20px;
+                padding: 0 20px;
                 // max-width: 100%;
             }
             .slider-content{

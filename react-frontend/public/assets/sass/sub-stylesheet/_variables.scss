@@ -5,6 +5,7 @@ $bootstrap-sass-asset-helper: false !default;
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("../../css/clanot-narrowbook-cufonfonts-webfont/style.css");
 @import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @font-face {
     font-family: 'YourFontName';
     src: url('../font/Franklin\ Gothic\ Demi\ Regular.ttf') format('woff2'), /* Add other formats if necessary */
@@ -19,7 +20,7 @@ $bootstrap-sass-asset-helper: false !default;
 
 $common-padding:120px 0;
 // background color
-$theme-color: #126E3C;
+$theme-color: #C85628;
 $theme-color2: #168A4B;
 // text color
 $color-white: #fff;

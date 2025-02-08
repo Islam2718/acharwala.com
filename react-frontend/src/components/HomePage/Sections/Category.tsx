@@ -100,6 +100,8 @@ const App: React.FC = () => {
       <section className="category-slider mb-5">
         <div className="slider-body">
           <div className="container">
+          <p className="heading-text"><i className="fa-solid fa-fire-flame-curved"></i>&nbsp;বেস্ট সেলিং </p>
+          <div className="heading-border"></div> 
             <div className="border-text mt-1">
               {/* <p className="heading-text">ক্যাটাগরি সমূহ</p>
               <div className="heading-border"></div>  */}
@@ -116,29 +118,156 @@ const App: React.FC = () => {
                   },
                   768: {
                     slidesPerView: 4,
-                    spaceBetween: 40,
+                    spaceBetween: 30,
                   },
                   1024: {
-                    slidesPerView: 5,
-                    spaceBetween: 50,
+                    slidesPerView: 4,
+                    spaceBetween: 30,
                   },
                 }}
-                className="categorySwiper"  
-                modules={[Autoplay, Pagination, Navigation]}>
-                {category.map((categoryItem) => (
+                className="categorySwiper pb-4"  
+                modules={[Autoplay, Pagination, Navigation]}
+                pagination={{ clickable: true }}
+                >
+                {/* {category.map((categoryItem) => (
                   <SwiperSlide key={categoryItem.id} className="slider-item ">
                     <Link to={`/product?category=${categoryItem.id}`}>
                       <div className="caregory-slider-img d-flex justify-content-center">
                         <img src={`${config.fileUrl1}${categoryItem.thumb}`} alt="" />
-                        {/* <img src="assets/img/category/oil-1.png" alt=""/> */}
+                        {/* <img src="assets/img/category/oil-1.png" alt=""/>
                       </div>
                       <div className="category-slider-content">
                         <h6>{categoryItem.name}</h6>
-                        {/* <p>{categoryItem.description}</p> */}
+                        {/* <p>{categoryItem.description}</p> 
                       </div>
                     </Link>
                   </SwiperSlide>
-                ))}
+                ))} */}
+                <SwiperSlide className="slider-item ">
+                     <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5'><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5'><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </SwiperSlide>
+                <SwiperSlide className="slider-item ">
+                     <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5'><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5'><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </SwiperSlide>
+                <SwiperSlide className="slider-item ">
+                     <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5'><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5'><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </SwiperSlide>
+                <SwiperSlide className="slider-item ">
+                     <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5'><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5'><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </SwiperSlide>
+                <SwiperSlide className="slider-item ">
+                     <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5'><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5'><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </SwiperSlide>
               </Swiper>
             </div>
 

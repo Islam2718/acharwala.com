@@ -226,7 +226,7 @@ const Header: React.FC = () => {
                 <section className="header-top">
                     <div className="container">
                         <div className="manu-area d-flex justify-content-between align-items-center">
-                         <button onClick={handleToggle} className='d-xl-none d-block menu-open-btn'><img src="assets/img/menu-icon.png" alt="" /></button>
+                         <button onClick={handleToggle} className='d-xl-none d-block menu-open-btn p-2'><img src="assets/img/menu-icon.png" alt="" /></button>
                             <div className="contact w-xl-100">
                                 {siteInfo && (
                                     <Link to={`tel: ${siteInfo && siteInfo.phone}`}>
@@ -238,35 +238,36 @@ const Header: React.FC = () => {
                             <div className="navmanu w-xl-100 h-0 w-100" >
                                 <div className={`navlist p-0 m-0${isToggled ? ' open' : ''}`}>
                                     <div className="close-btn d-flex justify-content-end d-xl-none">                                        
-                                        <button onClick={handleToggle} className='d-xl-none d-block close-btn-img'><img src="assets/img/menu-icon-close.png" alt=""/></button>
+                                        <button onClick={handleToggle} className='d-xl-none d-block close-btn-img pt-3'><i className="fa-solid fa-circle-xmark"></i></button>
                                     </div>  
                                     <ul className='nav-menu-list'>
                                         <li><Link to="/">হোম</Link></li>
                                         {/* <li><Link to="/brands">ব্রান্ড</Link></li> */}
                                         <li>
-                                            <Link to="/product" className="accordion-icon">পণ্য <i className="fa-solid fa-sort-down"></i></Link>
-                                            <div className="dropdown">
+                                            <Link to="/product" className="accordion-icon">দোকান </Link>
+                                            {/* <Link to="/product" className="accordion-icon">পণ্য <i className="fa-solid fa-sort-down"></i></Link> */}
+                                            {/* <div className="dropdown">
                                                 <div className="row">
                                                     {categoryData && categoryData.map((category, index) => (
                                                         <div key={index} className="col-xl-3 col-sm-12">
                                                             <ul>
                                                                 <li key={index}>
-                                                                    {/* <Link to={`/product/${category.name.toUpperCase()}`}>{category.name}</Link> */}
+                                                                    {/* <Link to={`/product/${category.name.toUpperCase()}`}>{category.name}</Link> 
                                                                     <Link to={`/product/${category.id}`}>{category.name}</Link>
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                     ))}
                                                 </div>
-                                            </div>
+                                            </div> */}
                                         </li>
-                                        <li><Link to="/blog">ব্লগ</Link></li>
-                                        <li><Link to="/contact-us">যোগাযোগ করুন</Link></li>
+                                        <li><Link to="/blog">ডিসকাউন্ট</Link></li>
+                                        <li><Link to="/contact-us">এক বক্স ভালোবাসা</Link></li>
                                     </ul>                         
                                 </div>
                             </div>
                             <div className="shiping-content d-flex justify-content-end w-100">
-                                <p className="mb-0 word-wrap"> এখনি স্টোর তৈরি করুন <i className="fa-solid fa-truck-fast"></i></p>
+                                <p className="mb-0 word-wrap"> এখনি অ্যাফিলিয়েট করুন <i className="fa-solid fa-truck-fast"></i></p>
                             </div>
                         </div>
                     </div>
@@ -275,7 +276,7 @@ const Header: React.FC = () => {
                     <div className="container">
                         <div className="second-menu d-flex justify-content-between align-items-center">
                             <div className="logo">
-                                <Link to="/"><img className="img-fluid" src={`${config.fileUrl}logo.png`} alt="" /></Link>
+                                <Link to="/"><img className="img-fluid btn" src={`${config.fileUrl}logo.png`} alt="" /></Link>
                             </div>                      
                             <div className="input-box d-flex align-items-center justify-content-center  h-100">
                                 <input type="text" className="form-control input-design" placeholder="আপনার পণ্যটি  খুজুন ....." value={query}  onChange={(e) => setQuery(e.target.value)} />
@@ -284,7 +285,7 @@ const Header: React.FC = () => {
                             <div className="header-icon d-flex align-items-center justify-content-end h-100">
                                 { userData2 ? 
                                 <div>
-                                    <button className="dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i className="fa-solid fa-user-check"></i></button>
+                                    <button className="dropdown-toggle btn p-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i className="fa-solid fa-user-check"></i></button>
                                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                             <li style={{ fontSize: '0.768rem'}}><span className="dropdown-item">{userData2.name}</span></li>
                                             <li><Link className="dropdown-item" to="/dashboard-info" style={{ fontSize: '0.768rem'}}>ড্যাশবোর্ড</Link></li>
@@ -294,7 +295,7 @@ const Header: React.FC = () => {
                                 </div>: 
                                 // dropdown of user
                                 <div>
-                                    <Link to="/login"><i className="fa-regular fa-user"></i></Link>
+                                    <Link to="/login" className='btn p-0'><i className="fa-regular fa-user"></i></Link>
                                     {/* <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li><Link className="dropdown-item" to="/login" style={{ fontSize: '0.768rem'}}>লগইন</Link></li>
                                         <li><Link className="dropdown-item" to="/register" style={{ fontSize: '0.768rem'}}>রেজিস্ট্রেশন</Link></li>
@@ -303,18 +304,19 @@ const Header: React.FC = () => {
                                 </div>
                                 }
                                 {/* <Link to="/favorite"><i className="fa-regular fa-heart"></i></Link> */}
-                                <button className='position-relative'  data-bs-toggle="modal" data-bs-target="#exampleModal2"><i className="fa-regular fa-heart"></i> {
-                                    wishlistCount > 0 && (
+                                <button className='position-relative btn p-0'  data-bs-toggle="modal" data-bs-target="#exampleModal2"><i className="fa-regular fa-heart"></i> 
+                                    {
+                                        wishlistCount > 0 && (
                                         <span className="cart-badge">{wishlistCount}</span>
-                                    )
-                                }</button>
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={updateLoacalStorage} className='position-relative'><i className="fa-solid fa-cart-plus"></i> 
+                                    )}
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={updateLoacalStorage} className='position-relative btn p-0'>
+                                    <i className="fa-solid fa-cart-plus"></i>
                                     {totalQuantity > 0 && (
                                         <span className="cart-badge">{totalQuantity}</span>
-                                )}
+                                    )}
                                 </button>
                                 {/* modal of cart */}
-                               
                             </div>
                         </div>
                     </div>
