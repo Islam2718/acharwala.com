@@ -1,0 +1,365 @@
+    //*======= header css start =====*//
+    .header{
+        &.hidden{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+            transition: all 0.2s ease-in-out;
+            transform: scaleY(1);
+        }
+        &.visible{
+            position: relative;
+            transition: all 0.2s ease-in-out;
+            transform: scaleY(1);
+            z-index: 9;
+        }
+        .header-top{
+            z-index: 999999999;
+            width: 100%;
+            background: $theme-color;
+            padding: 15px 0;
+            @include breakpoint(mobile){
+                padding: 0;
+            }
+            .manu-area{
+                .contact{
+                    a{
+                       visibility: hidden;
+                    }
+                }
+                .menu-open-btn{
+                    background: transparent;
+                    img{
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+                .shiping-content{
+                    p{
+                    //    visibility: hidden;
+                    //display: none;
+                        
+                    }
+                    i{
+                        opacity: 0.7;
+                        visibility: visible;
+                        // display: inline-block;
+                        
+                    }
+                }
+            }
+            .contact{
+                a{
+                    text-decoration: none;
+                    color: $white-color;
+                    i{
+                        opacity: 0.7;
+                    }
+                }
+            }        
+            .navmanu{    
+                .navlist{
+                        position: absolute;
+                        top: 52px;
+                        left: -280px;
+                        width: 280px;
+                        height: 100vh;
+                        background-color: $theme-color;
+                        z-index: 99;
+                        display: block;
+                        padding: 5px;
+                        overflow-y: scroll;
+                        transition: all 0.2s ease-in-out;
+                        .close-btn{
+                            .close-btn-img{
+                                background: transparent;
+                                margin-right: 10px;
+                                img{
+                                    width: 10px;
+                                    height: 10px;
+                                }
+                            }
+                        }
+                    .nav-menu-list{
+                        li{
+                            list-style: none;
+                            margin: 0 -11px;
+                            position: relative;
+
+
+                            a{
+                                text-decoration: none;
+                                color:$white-color;
+                                i{
+                                    margin-top: 100px;
+                                    @include breakpoint(mobile){
+                                        margin-top: 0;
+                                    }
+                                    @include breakpoint(my-lg){
+                                        margin-top: -300px ;
+                                    }
+                                }   
+                            }
+                            .dropdown{
+                                left: 0;
+                                top: 0;
+                                // width: 100%;
+                                position: relative;
+                                display: block;
+                                transition: all 0.2s ease-in-out;
+                                z-index: 999;    
+                                transform: scaleY(0);
+                                height: 0;
+                                transform-origin: top; 
+                                transition-duration: 0.2s;
+                                ul{ 
+                                    li{
+                                        // padding: 2px;
+                                        margin: 6px 0;
+                                        padding: 5px;
+
+                                        text-align: center;
+                                        transition-duration: 0.2s;
+                                        text-align: start;
+                                        &:hover{
+                                            border: 1px solid $white-color;
+                                            border-radius: 5px;
+                                            color: $white-color;
+                                        }
+                                        @include breakpoint(mobile){
+                                            margin: 0;
+                                            width: 200px;
+                                        }
+                                    } 
+                                }
+                            }
+                            &:hover{
+                                .dropdown{                                    
+                                    transform: scaleY(1);
+                                    height: auto;
+                                }
+                            }
+
+                        }                        
+                    } 
+                    &.open{
+                        transition: all 0.2s ease-in-out;
+                        left: 0;
+                    }
+                }               
+            }    
+            @include breakpoint(xl){
+                .manu-area{
+                    .contact{
+                        a{
+                            visibility: visible;
+                        }
+                    }
+                    .shiping-content{
+                        p{
+                            // visibility: visible;
+                            display: block;
+                        }
+                        i{
+                            visibility: visible;
+                        }
+                    }
+                }
+                
+                .navmanu{
+                    .navlist{
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                        width: 100%;
+                        height: auto;
+                        background-color: transparent;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow-y: visible;
+                        .nav-menu-list{
+                            border-bottom: none;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin: 0;
+                            li{
+                                list-style: none;
+                                margin: 0;
+                                padding: 0 17px;       
+                                a{
+                                    text-decoration:none; 
+                                    color: $white-color;
+                                    font-size: 0.768rem;   
+                                    // padding: 0 15px; 
+                                    position: relative;
+                                    i{
+                                        margin-top: 3px;
+                                        margin-left: 3px;
+                                        position: absolute;
+                                    }                          
+                                }
+                                .dropdown{
+                                    position: absolute;
+                                    left: -719%;
+                                    width:1000px;
+                                    top: 30px;
+                                    transition: all 0.2s ease-in-out;
+                                    z-index: 999;    
+                                    transform: scaleY(0);
+                                    transform-origin: top; 
+                                    border-radius: 5px;
+                                    background: $theme-color;
+                                    padding: 20px; 
+                                    transition-duration: 0.2s;
+                                    ul{
+                                        li{
+                                            margin: 6px 0;
+                                            padding: 5px;
+                                            text-align: center;
+                                            transition-duration: 0.2s;
+                                            border: 1px solid $theme-color;
+                                            border-radius: 5px;
+                                            &:hover{
+                                                border: 1px solid $white-color;
+                                                border-radius: 5px;
+                                                color: $white-color;
+                                            }
+                                        } 
+                                    }
+                                }
+                                &:hover{
+                                    .dropdown{                                    
+                                        transform: scaleY(1);
+                                        margin-top: 10px;
+                                    }
+                                }
+                            }
+                        }  
+                    }                    
+                }            
+            }
+            .shiping-content{
+                p{
+                    color: $white-color;
+                }
+                i{
+                    opacity: 0.7;
+                }
+            }
+        }
+        .header-bottom{
+            background-color: $theme-light;
+            .second-menu{
+                .logo{
+                    img{
+                        width:100px;
+                    }
+                    span{
+                        font-size: 1.2rem;
+                        color: $theme-color;
+                    }
+                }
+                .input-box{
+                    height: 40px;
+                    width: 100%;
+                    margin-left: 6px;
+                    border-radius: 50px;
+                    position: relative;
+                    outline: 1px solid $border-color;
+                    margin: 0 10px;
+                    @include breakpoint(mobile){
+                        width: 100%;
+                    }
+                    input{
+                        right:20px;
+                        width: 100%;
+                        border-radius: 50px;
+                        outline: none;
+                        border: none;
+                        font-size: 13px;  
+                        
+                    }
+                    i{
+                        position: absolute;
+                        cursor: pointer;
+                        right: -9px;
+                        padding: 0 20px 0 20px; 
+                        z-index: 10;
+                    }
+                }
+                .header-icon{
+                    i{
+                        color: #383839;
+                        font-size: 18px;
+                        padding: 4px;
+                    }
+                }
+            }
+            @include breakpoint(xl){
+                .second-menu{
+                    .logo{
+                        img{
+                            width: 110px;
+                        }
+                    }
+                    .input-box{
+                        height: 40px;
+                        width: 34%;
+                        border-radius: 50px;
+                        position: relative;
+                        outline: 1px solid $border-color;
+                        input{
+                            right:20px;
+                            width: 100%;
+
+                            border-radius: 50px;
+                            outline: none;
+                            border: none;
+                            font-size: 13px;  
+                            
+                        }
+                        i{
+                            position: absolute;
+                            cursor: pointer;
+                            right: -9px;
+                            padding: 0 20px 0 20px; 
+                            z-index: 10;
+                        }
+                        .custom-focous {
+                            &:focus {
+                            border-color: #FFE1DB; 
+                            box-shadow: 0 0 0 0.1rem #FFE1DB; 
+                            }
+                        }
+                    }
+                    .header-icon{
+                        i{
+                            color: #383839;
+                            font-size: 20px;
+                            padding: 0 8px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .cart-badge {
+            background-color: transparent;
+            color: black;
+            border-radius: 50%;
+            padding: 0px 5px;
+            font-size: 12px;
+            position: absolute;
+            top: -15px;
+            right: -4px;
+          }
+          
+    }
+    
+
+//*======= header css ends  =====*//
+
