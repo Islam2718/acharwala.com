@@ -17,6 +17,7 @@ use App\Http\Controllers\API\WidgetController;
 
 use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\ProductController;
+use App\Http\Controllers\API\OfferController;
 use App\Http\Controllers\API\StockController;
 use App\Http\Controllers\API\OrderController;
 use App\Http\Controllers\API\OrderItemController;
@@ -77,6 +78,7 @@ Route::post('/change-password', [UserauthController::class, 'changePassword']);
 
     Route::resource('category', CategoryController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
     Route::resource('product', ProductController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
+    Route::resource('offer', OfferController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
     Route::resource('stock', StockController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
     Route::resource('order', OrderController::class)->only(['index', 'store', 'update', 'show', 'destroy']);
     Route::resource('order-item', OrderItemController::class)->only(['index', 'store', 'update', 'show', 'destroy']);

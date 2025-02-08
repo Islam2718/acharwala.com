@@ -10,7 +10,6 @@ class Product extends Model
     use HasFactory;
 
     protected $casts = [
-        'user_id' => 'integer',
         'price' => 'float',
         'category_id' => 'integer',
         'is_top' => 'integer',
@@ -20,21 +19,17 @@ class Product extends Model
 
     protected $fillable = [
         'category_id',
-        
         'name',
         'slug',
         'description',
         'short_description',
         'thumb',
         'images',
-        
         'price',
         'unit',
         'is_top',
         'is_featured',
         'is_offered',
-
-        'user_id',
         'status'
     ];
 
