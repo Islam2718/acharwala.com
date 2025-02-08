@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('slug');
             $table->string('description')->nullable();
             $table->string('short_description')->nullable();
-            $table->string('thumb')->nullable();
+            $table->string('thumb_one')->nullable();
+            $table->string('thumb_two')->nullable();
             $table->string('images')->nullable();
             $table->double('price', 15, 9)->nullable();
             $table->string('unit')->nullable();
@@ -31,10 +32,6 @@ return new class extends Migration
 
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
-
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
-
             $table->timestamps();
         });
     }
