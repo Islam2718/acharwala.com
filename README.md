@@ -2,11 +2,11 @@
     <a href="#" target="_blank"><img src="logo.jpg"></a>
 </p>
 
-# Krishikhamar.com - Development
+# Acharwala.com - Development
 
-Multivendor eCommerce Website with extensively managing of Order Management System with Delivery Ticket Printing System.
+Single vendor eCommerce Website & POS with extensively managing of Order Management System with Delivery Ticket Printing System.
 
-## Features of Krishikhamar.com
+## Features of Acharwala.com
 - Responsite Design with Static content (dynamic).
 - Header & Footer
 - Homepage
@@ -52,7 +52,7 @@ Composing...
 
 1. Clone The project: 
 ```bash
-    git clone https://github.com/Islam2718/krishikhamar.com.git
+    git clone https://github.com/Islam2718/Acharwala.com.git
 ```
 
 ## 
