@@ -39,7 +39,7 @@ const App: React.FC = () => {
       <section className='banner-area'>
         <div className='container'>
           <Swiper autoplay={{ delay: 2000, disableOnInteraction: false }} modules={[Autoplay, Pagination, Navigation]}>
-            {slider.map((slider) => (
+            {/* {slider.map((slider) => (
               <SwiperSlide key={slider.id} className='swiper-item'>
                 <div className='row'>
                   <div key={slider.id} className='col-md-6 d-flex align-items-center slider-part'>
@@ -51,18 +51,18 @@ const App: React.FC = () => {
                   </div>
                 </div>
               </SwiperSlide>
-            ))}
-            {/* <SwiperSlide className='swiper-item'>
+            ))} */}
+            <SwiperSlide className='swiper-item'>
               <div className='row'>
                 <div className='col-md-6 d-flex align-items-center slider-part'>
-                  <img src={`${config.fileUrl}slider/slider_4_bg.jpg`} className="img-fluid" alt=""  />
-                  <div className="slider-content">
+                  <img src={`assets/acharwala-img/banner.jpg`} className="img-fluid" alt=""  />
+                  {/* <div className="slider-content">
                       <h1><span>চিনিগুরা পোলাওয়ের</span><br />চাল</h1>
                       <p>সেরা দামে চাল ।</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
-            </SwiperSlide> */}
+            </SwiperSlide>
           </Swiper>
         </div>
       </section>

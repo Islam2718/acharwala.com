@@ -113,15 +113,14 @@ const Product: React.FC<{ product: ProductProps }> = ({ product }) => {
     <div className="App">
         <div className="products my-5 mb-5">
           <div className="container">
-          <p className="heading-text">প্রোডাক্ট সমূহ </p>
+          <p className="heading-text"><i className="fa-regular fa-heart"></i>&nbsp;নতুন প্রোডাক্ট</p>
           <div className="heading-border"></div> 
             <div className="row">
             {/* {Array.isArray(productArray) && productArray.map((product) => ( */}
-              {Array.isArray(productArray) && productArray.map((product) => (
+              {/* {Array.isArray(productArray) && productArray.map((product) => (
                 product.is_top ? (
                   <div className="col-lg-3 col-md-6 col-sm-6 col-6 my-2 m-auto" key={product.id}>
                       <div className="card">
-                              {/* <span className="stock-btn">Stock</span> */}
                             <Link to={`/product-details/${product.id}`}>
                               <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
                                   <img src={`${config.fileUrl1}${product.thumb}`} key={product.id} alt="" className="img-fluid p-2" />
@@ -143,8 +142,283 @@ const Product: React.FC<{ product: ProductProps }> = ({ product }) => {
                   </div>
                 ): 
                 null
-                ))}
-            </div>
+                ))} */}
+                <div className="col-lg-3 col-md-6 col-sm-6 col-6 my-2 m-auto">
+                    <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>, <span> 250 gm</span> 
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToCart({ ...product, price: product.price ?? 0 })}><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToWishlist({ ...product, price: product.price ?? 0 }) }><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-6 my-2 m-auto">
+                    <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>, <span> 250 gm</span> 
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToCart({ ...product, price: product.price ?? 0 })}><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToWishlist({ ...product, price: product.price ?? 0 }) }><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-6 my-2 m-auto">
+                    <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>, <span> 250 gm</span> 
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToCart({ ...product, price: product.price ?? 0 })}><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToWishlist({ ...product, price: product.price ?? 0 }) }><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-6 my-2 m-auto">
+                    <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>, <span> 250 gm</span> 
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToCart({ ...product, price: product.price ?? 0 })}><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToWishlist({ ...product, price: product.price ?? 0 }) }><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-6 my-2 m-auto">
+                    <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>, <span> 250 gm</span> 
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToCart({ ...product, price: product.price ?? 0 })}><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToWishlist({ ...product, price: product.price ?? 0 }) }><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-6 my-2 m-auto">
+                    <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>, <span> 250 gm</span> 
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToCart({ ...product, price: product.price ?? 0 })}><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToWishlist({ ...product, price: product.price ?? 0 }) }><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-6 my-2 m-auto">
+                    <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>, <span> 250 gm</span> 
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToCart({ ...product, price: product.price ?? 0 })}><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToWishlist({ ...product, price: product.price ?? 0 }) }><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-6 my-2 m-auto">
+                    <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>, <span> 250 gm</span> 
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToCart({ ...product, price: product.price ?? 0 })}><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToWishlist({ ...product, price: product.price ?? 0 }) }><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-6 my-2 m-auto">
+                    <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>, <span> 250 gm</span> 
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToCart({ ...product, price: product.price ?? 0 })}><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToWishlist({ ...product, price: product.price ?? 0 }) }><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-6 my-2 m-auto">
+                    <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>, <span> 250 gm</span> 
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToCart({ ...product, price: product.price ?? 0 })}><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToWishlist({ ...product, price: product.price ?? 0 }) }><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div className="col-lg-3 col-md-6 col-sm-6 col-6 my-2 m-auto">
+                    <div className="card">
+                        {/* <span className="stock-btn">Stock</span> */}
+                        <Link to={`/product-details`}>
+                          <div className="card-image hover-overlay ripple" data-mdb-ripple-color="light">
+                              <img src={`./assets/acharwala-img/product-befor.jpg`} alt="n/a" className="img-fluid p-2 befor-image"/>
+                              <img src={`./assets/acharwala-img/product-after.jpg`} alt="n/a" className="img-fluid p-2 after-image"/>
+                          </div>
+                        </Link>
+                        <div className="card-body">
+                          <h6>আমড়ার মোরব্বা</h6>
+                          <span>500 gm</span>, <span> 250 gm</span> 
+                            <div className="price-cart d-flex justify-content-between">
+                                <ul className="price list-unstyled d-flex gap-2 m-0">
+                                    {/* {product.price ? (<li>&#2547; {formatter.format(product.price)}</li>) : (<li>--</li>)} */}
+                                    <li><del>300.00 ৳</del> 265.00 ৳</li>
+                                </ul>
+                                <ul className="cart list-unstyled d-flex gap-2 m-0">
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToCart({ ...product, price: product.price ?? 0 })}><i className="fa-solid fa-cart-plus"></i></button></li>
+                                    <li><button className='btn py-0 px-1 fs-5' onClick={() => handleAddToWishlist({ ...product, price: product.price ?? 0 }) }><i className="fa-regular fa-heart"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
           </div>
         </div>
     </div>

@@ -119,7 +119,6 @@ const App: React.FC = () =>  {
             </div>
           </div>
         </div>
-        <p className="text-center copyright m-0 text-white" > <span className="text-white" dangerouslySetInnerHTML={{ __html: `&copy; ${siteInfo && siteInfo.copyright}`}}></span></p>
       </footer>
     </div>
   );

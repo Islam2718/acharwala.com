@@ -35,7 +35,7 @@ Typography
     border: none;
 }
 body {
-  font-family: 'Franklin Gothic Demi Regular', sans-serif !important;
+  font-family: "Hind Siliguri",Arial,Helvetica,sans-serif !important;
   font-weight: 500;
   position: relative;
   transition: all 0.3s ease-in-out;
@@ -130,6 +130,10 @@ a{
   background: $border-color2;
   height: 2px;
 }
+.e-font-icon-svg.e-fas-fire{
+  height: 24px;
+  color: #C85628;
+}
 // coustom input
 .form-control.input-design{
   border: 1px solid $border-color2;
@@ -142,7 +146,7 @@ a{
   background: #F9FDFF;
   &:focus {
       border-color: #5EB91B; 
-      box-shadow: 0 0 0 0.1rem #5EB91B; 
+      box-shadow: 0 0 0 0.1rem #C8562880; 
     }
 }
 .form-control.input-text-area{
@@ -447,4 +451,54 @@ tbody, td, tfoot, th, thead, tr{
     width: 100%;
   }
 }
+
+.accordion-button{
+  .fa-minus{
+    color: white;
+    display: none;
+    padding: 5px 6px;
+    background-color: $theme-color;
+    border-radius: 50%;
+    font-size: 10px;
+  }
+  .fa-plus{
+    color: white;
+    display: block;
+    padding: 5px 6px;
+    background-color: $theme-color;
+    border-radius: 50%;
+    font-size: 10px;
+  }
+  &::after {	
+    display: none;
+  }
+}
+.accordion-button:focus{
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: transparent;
+  box-shadow: none;
+  .fa-minus{
+    color: white;
+    display: block;
+    padding: 5px 6px;
+    background-color: $theme-color;
+    border-radius: 50%;
+    
+  }
+  .fa-plus{
+    color: white;
+    display: none;
+    padding: 5px 6px;
+    background-color: $theme-color;
+    border-radius: 50%;
+  }
+  &::after {	
+    display: none;
+  }
+}
+
+
 
